@@ -1,10 +1,10 @@
-import { Factory } from 'ember-cli-mirage';
+import { Factory, faker } from 'ember-cli-mirage';
 
 export default Factory.extend({
-	title() {
-		return 'Post';
+	title(i) {
+		return `Post ${i + 1}`;
 	},
 	body() {
-		return 'hello';
+		return faker.random.words();
 	}
 });
