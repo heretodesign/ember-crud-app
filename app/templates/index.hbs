@@ -8,6 +8,10 @@
 			<button type="button" onclick={{action "deletePost" post}}>
 				Delete
 			</delete>
+
+			{{#link-to type="button" "edit" post.id}}>
+				Edit
+			{{/link-to}}
 		</li>
 	{{/each}}
 </ul>
